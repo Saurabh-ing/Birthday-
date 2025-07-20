@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Happy Birthday!</title>
   <style>
-    /* Embed Great Vibes font locally */
     @font-face {
       font-family: 'Great Vibes';
       src: url('GreatVibes-Regular.ttf') format('truetype');
@@ -14,7 +13,7 @@
     }
 
     body {
-      background-image: url('https://saurabh-ing.github.io/Birthday-/bg.jpeg'); /* ✅ corrected filename */
+      background-image: url('https://saurabh-ing.github.io/Birthday-/bg.jpeg');
       background-repeat: no-repeat;
       background-position: center;
       background-attachment: fixed;
@@ -51,16 +50,6 @@
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
-    }
-
-    .image {
-      margin: 30px auto;
-      width: 290px;
-      height: 420px;
-      background: url('https://saurabh-ing.github.io/Birthday-/m.mp4') center/cover no-repeat;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
-      animation: fadeIn 4s ease-in-out;
     }
 
     .surprise {
@@ -123,11 +112,21 @@
       cursor: pointer;
       transition: all 0.3s ease;
       animation: fadeIn 2s ease-in-out;
-      margin-top: 10px;
     }
 
     button:hover {
       background-color: #d81b60;
+    }
+
+    video {
+    margin: 30px auto;
+    width: 80%; /* takes 80% of screen width */
+    height: auto; /* adjusts height automatically */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+    display: block;
+    animation: fadeIn 4s ease-in-out;
+}
     }
   </style>
   <script>
@@ -138,13 +137,16 @@
   </script>
 </head>
 <body>
-
   <h1>Happy Birthday, Muskan! 🎂</h1>
   <p>
     Even though we're miles apart, I wanted to send you warm wishes on your special day. I hope it’s filled with happiness and moments that make you smile.
   </p>
 
-  <div class="image"></div>
+  <!-- 🎥 Video instead of image -->
+  <video autoplay muted loop playsinline>
+    <source src="https://saurabh-ing.github.io/Birthday-/m.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
   <p>
     Your kindness and lovely sense of humor brighten the days of those around you. Wishing you a wonderful birthday and a year ahead filled with joy and sweet surprises.
