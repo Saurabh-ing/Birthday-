@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday!</title>
+  <style>
+    /* Embed Great Vibes font locally */
+    @font-face {
+      font-family: 'Great Vibes';
+      src: url('GreatVibes-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      background-image: url('bg.jpg'); /* your background image */
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+      text-align: center;
+      padding: 40px;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5em;
+      color: #ffe4ec;
+      margin-bottom: 0.3em;
+      text-shadow: 3px 3px 8px #000000;
+      animation: fadeInDown 2s ease-in-out;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 12px auto;
+      text-shadow: 1px 1px 3px #000000;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .image {
+      margin: 30px auto;
+      width: 260px;
+      height: 260px;
+      background: url('m.jpg') center/cover no-repeat; /* your profile image */
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+      animation: fadeIn 4s ease-in-out;
+    }
+
+    .surprise {
+      margin-top: 30px;
+    }
+
+    .hidden-message {
+      display: none;
+      margin-top: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
+      animation: reveal 1s ease-in-out forwards;
+      color: #4a148c;
+    }
+
+    @keyframes reveal {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .heart {
+      font-size: 2em;
+      color: #e91e63;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .quote {
+      font-style: italic;
+      color: #d81b60;
+      margin: 20px 0;
+    }
+
+    .poem {
+      font-size: 1.2em;
+      line-height: 1.6;
+      background: #fce4ec;
+      border-left: 5px solid #ec407a;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      color: #4a148c;
+      font-family: 'Great Vibes', cursive;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 1em;
+      background-color: #ad1457;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #d81b60;
+    }
+  </style>
+  <script>
+    function toggleMessage() {
+      const msg = document.getElementById('message');
+      msg.style.display = (msg.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="bm.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <h1>Happy Birthday, Muskan! 🎂</h1>
+  <p>
+    Even though we're miles apart, I wanted to send you warm wishes on your special day. I hope it’s filled with happiness and moments that make you smile.
+  </p>
+
+  <div class="image"></div>
+
+  <p>
+    Your kindness and lovely sense of humor brighten the days of those around you. Wishing you a wonderful birthday and a year ahead filled with joy and sweet surprises.
+  </p>
+
+  <div class="surprise">
+    <button onclick="toggleMessage()">Click Me 🎁</button>
+    <div id="message" class="hidden-message">
+      <div class="quote">“Warning: Reading this message might cause unexpected smiling!” 😄</div>
+      <div class="poem">
+        You're officially one year sweeter (as if that was even possible!) 😎<br>
+        May your day be full of cake, laughter, and maybe a few butterflies too 🦋<br><br>
+        Here’s a little secret: the world’s a bit better with you in it. 💫<br>
+        Happy Birthday, Muskan! Keep shining, keep laughing, and don’t forget to save me a slice of cake! 🎂
+      </div>
+      <p class="heart">💖</p>
+    </div>
+  </div>
+
+  <p style="margin-top: 50px; font-style: italic; text-shadow: 1px 1px 3px #000000;">
+    Made with warm thoughts, from Saurabh 🌅
+  </p>
+</body>
+</html>
